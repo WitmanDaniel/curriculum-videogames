@@ -1,0 +1,640 @@
+/* ====================================================================
+   AESTHETIC WINDOWS 95 PORTFOLIO
+   Witman Daniel Saldaña Vargas - Roblox Systems Developer
+   ==================================================================== */
+
+:root {
+  --w95-bg: #008080; /* Classic Teal */
+  --w95-gray: #c0c0c0;
+  --w95-dark-gray: #808080;
+  --w95-light: #ffffff;
+  --w95-blue: #000080; /* Classic titlebar Navy Blue */
+  --w95-font: "MS Sans Serif", Tahoma, "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--w95-font);
+  font-size: 13px;
+  color: #000000;
+  background-color: var(--w95-bg);
+  min-height: 100vh;
+  padding-bottom: 45px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==============================================
+   TOP MENU BAR
+   ============================================== */
+.win-menubar {
+  background-color: var(--w95-gray);
+  border-bottom: 2px solid var(--w95-dark-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8px;
+  font-size: 12px;
+  box-shadow: inset 1px 1px 0px var(--w95-light);
+}
+
+.menu-left {
+  display: flex;
+  gap: 14px;
+}
+
+.menu-item {
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.menu-item:hover {
+  background-color: var(--w95-blue);
+  color: #ffffff;
+}
+
+.shortcut-key {
+  text-decoration: underline;
+}
+
+/* Language Switcher Windows 95 Style */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-label {
+  font-size: 11px;
+  color: #333333;
+  margin-right: 2px;
+}
+
+.lang-btn {
+  background-color: var(--w95-gray);
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: inset -1px -1px 0px var(--w95-dark-gray);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 6px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.lang-btn:active, .lang-btn.active {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  box-shadow: inset 1px 1px 0px var(--w95-dark-gray);
+  background-color: #dfdfdf;
+  color: var(--w95-blue);
+}
+
+/* ==============================================
+   PAGE CONTAINER & WINDOWS (CARDS)
+   ============================================== */
+.page-container {
+  max-width: 860px;
+  margin: 20px auto;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Classic 3D Window Container */
+.win-window {
+  background-color: var(--w95-gray);
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: inset -1px -1px 0px var(--w95-dark-gray), 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Classic Navy Titlebar */
+.win-titlebar {
+  background: var(--w95-blue);
+  height: 22px;
+  padding: 2px 4px 2px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.win-title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.win-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.win-btn {
+  width: 16px;
+  height: 14px;
+  background-color: var(--w95-gray);
+  border-top: 1px solid var(--w95-light);
+  border-left: 1px solid var(--w95-light);
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  box-shadow: inset -1px -1px 0px var(--w95-dark-gray);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.win-btn:active {
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid var(--w95-light);
+  border-bottom: 1px solid var(--w95-light);
+  box-shadow: inset 1px 1px 0px var(--w95-dark-gray);
+  padding: 1px 0 0 1px;
+}
+
+.win-content {
+  padding: 12px;
+}
+
+/* ==============================================
+   INSET BOX (Bloc de notas / Paneles)
+   ============================================== */
+.win-inset {
+  background: #ffffff;
+  border-top: 2px solid var(--w95-dark-gray);
+  border-left: 2px solid var(--w95-dark-gray);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  box-shadow: inset 1px 1px 0px #000000;
+  padding: 12px 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.win-inset p {
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.win-inset p:last-child {
+  margin-bottom: 0;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.main-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: -0.2px;
+}
+
+.role-title {
+  font-size: 12px;
+  color: #444444;
+  margin-top: 2px;
+}
+
+/* ==============================================
+   FIELDSETS & HABILIDADES DE ROBLOX
+   ============================================== */
+.skills-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.win-fieldset {
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid var(--w95-dark-gray);
+  border-bottom: 2px solid var(--w95-dark-gray);
+  padding: 10px 12px;
+  background: var(--w95-gray);
+  height: 100%;
+}
+
+.win-fieldset legend {
+  padding: 0 4px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000080;
+}
+
+.win-fieldset ul {
+  padding-left: 18px;
+  margin-top: 4px;
+}
+
+.win-fieldset li {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+/* ==============================================
+   JUEGOS ASIMÉTRICOS (CARDS CON LOGOS)
+   ============================================== */
+.asym-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.game-card {
+  border-top: 2px solid var(--w95-dark-gray);
+  border-left: 2px solid var(--w95-dark-gray);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  background: #ffffff;
+  padding: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.game-card.active-project {
+  background: #fdfdfd;
+  border-left: 3px solid #000080;
+}
+
+/* Container for game logo / thumbnail */
+.game-logo-container {
+  width: 115px;
+  min-width: 115px;
+  height: 115px;
+  background: #000000;
+  border-top: 2px solid var(--w95-dark-gray);
+  border-left: 2px solid var(--w95-dark-gray);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.game-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fallback placeholder when no image is loaded */
+.logo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  color: #333333;
+}
+
+.placeholder-title {
+  font-weight: bold;
+  font-size: 11px;
+  color: #000080;
+  margin-bottom: 4px;
+}
+
+.placeholder-hint {
+  font-size: 10px;
+  color: #666666;
+  line-height: 1.2;
+}
+
+.game-details {
+  flex: 1;
+}
+
+.game-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.game-title-row strong {
+  font-size: 14px;
+  color: #000080;
+}
+
+/* Status Badges */
+.status-badge {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-top: 1px solid var(--w95-light);
+  border-left: 1px solid var(--w95-light);
+  border-right: 1px solid var(--w95-dark-gray);
+  border-bottom: 1px solid var(--w95-dark-gray);
+}
+
+.status-badge.canceled {
+  background: #d4d0c8;
+  color: #8b0000;
+}
+
+.status-badge.progress {
+  background: #000080;
+  color: #ffffff;
+}
+
+.game-details p {
+  font-size: 12px;
+  color: #222222;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: var(--w95-gray);
+  border-top: 1px solid var(--w95-light);
+  border-left: 1px solid var(--w95-light);
+  border-right: 1px solid var(--w95-dark-gray);
+  border-bottom: 1px solid var(--w95-dark-gray);
+  font-size: 10px;
+  padding: 1px 6px;
+  color: #000;
+  font-family: monospace;
+}
+
+/* ==============================================
+   3D MODELS GALLERY
+   ============================================== */
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+
+.model-item {
+  border-top: 2px solid var(--w95-dark-gray);
+  border-left: 2px solid var(--w95-dark-gray);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  background: #2e2e2e;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: inset 1px 1px 0px #000000;
+  padding: 4px;
+}
+
+.model-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ==============================================
+   VIDEOS (SHOWREEL RESPONSIVE)
+   ============================================== */
+.section-intro {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #222;
+}
+
+.single-video-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.video-panel {
+  border-top: 2px solid var(--w95-dark-gray);
+  border-left: 2px solid var(--w95-dark-gray);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  background: #000000;
+}
+
+.panel-header {
+  background: var(--w95-gray);
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--w95-dark-gray);
+  color: #000;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.panel-caption {
+  background: var(--w95-gray);
+  padding: 6px 8px;
+  font-size: 11px;
+  color: #222;
+  border-top: 1px solid var(--w95-dark-gray);
+}
+
+/* ==============================================
+   RETRO 95 BUTTONS & CONTACTO
+   ============================================== */
+.retro-btn {
+  display: inline-block;
+  background-color: var(--w95-gray);
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: inset -1px -1px 0px var(--w95-dark-gray);
+  padding: 4px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.retro-btn:active {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  box-shadow: inset 1px 1px 0px var(--w95-dark-gray);
+  padding: 5px 9px 3px 11px;
+}
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.contact-buttons .retro-btn {
+  text-align: center;
+  padding: 8px 10px;
+}
+
+/* ==============================================
+   BOTTOM TASKBAR (WIN 95)
+   ============================================== */
+.win-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background-color: var(--w95-gray);
+  border-top: 2px solid var(--w95-light);
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 6px;
+  z-index: 999;
+}
+
+.start-button {
+  background-color: var(--w95-gray);
+  border-top: 2px solid var(--w95-light);
+  border-left: 2px solid var(--w95-light);
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: inset -1px -1px 0px var(--w95-dark-gray);
+  font-weight: bold;
+  font-size: 12px;
+  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  height: 22px;
+}
+
+.start-button:active {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  box-shadow: inset 1px 1px 0px var(--w95-dark-gray);
+}
+
+.taskbar-divider {
+  width: 2px;
+  height: 18px;
+  border-left: 1px solid var(--w95-dark-gray);
+  border-right: 1px solid var(--w95-light);
+}
+
+.taskbar-task {
+  flex: 1;
+  height: 22px;
+  background-color: var(--w95-gray);
+  border-top: 2px solid var(--w95-dark-gray);
+  border-left: 2px solid var(--w95-dark-gray);
+  border-right: 2px solid var(--w95-light);
+  border-bottom: 2px solid var(--w95-light);
+  padding: 2px 8px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskbar-tray {
+  border-top: 1px solid var(--w95-dark-gray);
+  border-left: 1px solid var(--w95-dark-gray);
+  border-right: 1px solid var(--w95-light);
+  border-bottom: 1px solid var(--w95-light);
+  padding: 2px 8px;
+  font-size: 11px;
+  background-color: var(--w95-gray);
+}
+
+/* ==============================================
+   MOBILE RESPONSIVENESS
+   ============================================== */
+@media (max-width: 600px) {
+  .menu-left {
+    display: none;
+  }
+  .win-menubar {
+    justify-content: flex-end;
+  }
+  .profile-header {
+    text-align: center;
+  }
+  .game-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .game-logo-container {
+    width: 100%;
+    max-width: 200px;
+  }
+  .skills-columns, .videos-grid {
+    grid-template-columns: 1fr;
+  }
+  .taskbar-task {
+    display: none;
+  }
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Witman Daniel Saldaña Vargas | Roblox Game Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Retro Top Menu Bar with Language Switcher -->
+  <nav class="win-menubar">
+    <div class="menu-left">
+      <div class="menu-item"><span class="shortcut-key">F</span><span data-i18n="menu_file">ile</span></div>
+      <div class="menu-item"><span class="shortcut-key">V</span><span data-i18n="menu_view">iew</span></div>
+      <div class="menu-item"><span class="shortcut-key">P</span><span data-i18n="menu_projects">rojects</span></div>
+      <div class="menu-item"><span class="shortcut-key">S</span><span data-i18n="menu_systems">ystems</span></div>
+      <div class="menu-item"><span class="shortcut-key">H</span><span data-i18n="menu_help">elp</span></div>
+    </div>
+    <div class="lang-switcher">
+      <span class="lang-label" data-i18n="lang_label">Language:</span>
+      <button type="button" class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
+      <button type="button" class="lang-btn" id="btn-es" onclick="setLanguage('es')">ES</button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-container">
+
+    <!-- Card 1: Profile / About Me -->
+    <section class="win-window">
+      <div class="win-titlebar">
+        <div class="win-title">
+          <span data-i18n="title_about">about_me.txt - Notepad</span>
+        </div>
+        <div class="win-controls">
+          <button class="win-btn" aria-label="Minimize">_</button>
+          <button class="win-btn" aria-label="Maximize">□</button>
+          <button class="win-btn close" aria-label="Close">×</button>
+        </div>
+      </div>
+      <div class="win-content">
+        <div class="profile-header">
+          <div>
+            <h1 class="main-name">Witman Daniel Saldaña Vargas</h1>
+            <p class="role-title" data-i18n="role_title">Game Developer • Roblox Systems & Gameplay Programmer (Lua / Luau)</p>
+          </div>
+        </div>
+
+        <div class="win-inset">
+          <p data-i18n="about_p1">
+            I am a gameplay and systems programmer specializing in <strong>Roblox Studio</strong> and <strong>Lua / Luau</strong>. I have deep knowledge in designing and building scalable game systems: secure client-server architectures, low-latency network replication, match state management, and reliable data persistence.
+          </p>
+          <p data-i18n="about_p2">
+            I specialize in developing <strong>asymmetric multiplayer games</strong> (1vs9 formats with differentiated roles), having engineered complete mechanics for hunter tracking, survivor stealth, active/passive abilities, interactive skill-check minigames, and real-time network synchronization.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 2: Technical Skills & Roblox Systems -->
+    <section class="win-window">
+      <div class="win-titlebar">
+        <div class="win-title">
+          <span data-i18n="title_systems">roblox_systems.exe</span>
+        </div>
+        <div class="win-controls">
+          <button class="win-btn">_</button>
+          <button class="win-btn">□</button>
+          <button class="win-btn close">×</button>
+        </div>
+      </div>
+      <div class="win-content">
+        <div class="skills-columns">
+          
+          <div class="skill-box">
+            <fieldset class="win-fieldset">
+              <legend data-i18n="sys_legend_1">Architecture & Networking</legend>
+              <ul>
+                <li data-i18n="sys_li_1_1">Secure Client-Server communication via RemoteEvents and RemoteFunctions</li>
+                <li data-i18n="sys_li_1_2">Server-side validation and exploit mitigation</li>
+                <li data-i18n="sys_li_1_3">Network replication optimization and packet bandwidth management</li>
+                <li data-i18n="sys_li_1_4">Modular frameworks (Knit, OOP with Lua Metatables, Component design)</li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="skill-box">
+            <fieldset class="win-fieldset">
+              <legend data-i18n="sys_legend_2">Gameplay Mechanics & Physics</legend>
+              <ul>
+                <li data-i18n="sys_li_2_1">Combat systems, spatial raycast hitboxes and hurtboxes</li>
+                <li data-i18n="sys_li_2_2">Asymmetric role systems (Survivor abilities vs. Killer mechanics)</li>
+                <li data-i18n="sys_li_2_3">Finite State Machines (FSM) for character states and animations</li>
+                <li data-i18n="sys_li_2_4">Physics manipulation using RunService and PhysicsService (Collision Groups)</li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="skill-box">
+            <fieldset class="win-fieldset">
+              <legend data-i18n="sys_legend_3">Data, UI & Tooling</legend>
+              <ul>
+                <li data-i18n="sys_li_3_1">Reliable persistence with ProfileService (session locking, anti-rollback)</li>
+                <li data-i18n="sys_li_3_2">Synchronized inventory, shop, and cosmetic frameworks</li>
+                <li data-i18n="sys_li_3_3">Dynamic interfaces and animations using TweenService</li>
+                <li data-i18n="sys_li_3_4">Professional developer workflow with Rojo, Git, and Visual Studio Code</li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="skill-box">
+            <fieldset class="win-fieldset">
+              <legend data-i18n="sys_legend_4">3D Modeling & Assets</legend>
+              <ul>
+                <li data-i18n="sys_li_4_1">3D asset and prop modeling using Blender</li>
+                <li data-i18n="sys_li_4_2">Low-poly mesh optimization, clean topology, and collision hulls</li>
+                <li data-i18n="sys_li_4_3">UV unwrapping, material texturing, and Roblox Studio import pipeline</li>
+                <li data-i18n="sys_li_4_4">Modular level environment assets and character equipment</li>
+              </ul>
+            </fieldset>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 3: Asymmetric Games Portfolio -->
+    <section class="win-window">
+      <div class="win-titlebar">
+        <div class="win-title">
+          <span data-i18n="title_games">asymmetric_games.bmp - Projects Gallery</span>
+        </div>
+        <div class="win-controls">
+          <button class="win-btn">_</button>
+          <button class="win-btn">□</button>
+          <button class="win-btn close">×</button>
+        </div>
+      </div>
+      <div class="win-content">
+        <p class="section-intro" data-i18n="games_intro">Asymmetric multiplayer game projects developed in Roblox:</p>
+
+        <div class="asym-grid">
+          
+          <!-- Project 1: S:U.I.T.N -->
+          <div class="game-card">
+            <div class="game-logo-container">
+              <img src="images/sutin.webp" alt="Logo S:U.I.T.N" class="game-logo-img">
+            </div>
+            <div class="game-details">
+              <div class="game-title-row">
+                <strong>S:U.I.T.N</strong>
+                <span class="status-badge canceled" data-i18n="suitn_badge">Alpha Phase • Canceled due to budget</span>
+              </div>
+              <p data-i18n="suitn_desc">
+                Asymmetric 1vs9 multiplayer game built on Roblox. One player takes on the role of the Killer tasked with hunting down and eliminating 9 survivors across the map. Programmed interactive skill-check minigames for survivors to interact with generators and escape objectives, round lifecycle systems, active survivor stealth perks, and raycast impact physics. The project concluded in alpha stage due to budget constraints.
+              </p>
+              <div class="game-tags">
+                <span class="tag">Lua / Luau</span>
+                <span class="tag">1vs9 Asymmetric</span>
+                <span class="tag">Killer Mechanics</span>
+                <span class="tag">Interactive Minigames</span>
+                <span class="tag">Alpha Phase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: AGWNTDAS -->
+          <div class="game-card active-project">
+            <div class="game-logo-container">
+              <img src="images/agwntdas.webp" alt="Logo AGWNTDAS" class="game-logo-img">
+            </div>
+            <div class="game-details">
+              <div class="game-title-row">
+                <strong>AGWNTDAS</strong>
+                <span class="status-badge progress" data-i18n="agwntdas_badge">Alpha Phase • In Development</span>
+              </div>
+              <p data-i18n="agwntdas_desc">
+                Spiritual successor 1vs9 asymmetric game currently in active alpha production. Expands upon previous systems with refined Killer pursuit logic, complex survivor minigames, advanced stealth mechanics, modular architecture (Knit/OOP), optimized client-server replication, and robust profile save systems using ProfileService.
+              </p>
+              <div class="game-tags">
+                <span class="tag">Lua / Luau</span>
+                <span class="tag">1vs9 Asymmetric</span>
+                <span class="tag">Survival Minigames</span>
+                <span class="tag">ProfileService</span>
+                <span class="tag">Alpha Phase</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 4: 3D Modeling Gallery -->
+    <section class="win-window">
+      <div class="win-titlebar">
+        <div class="win-title">
+          <span data-i18n="title_models">3d_models.bmp - 3D Art & Assets</span>
+        </div>
+        <div class="win-controls">
+          <button class="win-btn">_</button>
+          <button class="win-btn">□</button>
+          <button class="win-btn close">×</button>
+        </div>
+      </div>
+      <div class="win-content">
+        <div class="models-grid">
+          
+          <div class="model-item">
+            <img src="images/modelo1.png" alt="3D Model 1" class="model-img">
+          </div>
+
+          <div class="model-item">
+            <img src="images/modelo2.png" alt="3D Model 2" class="model-img">
+          </div>
+
+          <div class="model-item">
+            <img src="images/modelo3.png" alt="3D Model 3" class="model-img">
+          </div>
+
+          <div class="model-item">
+            <img src="images/modelo4.png" alt="3D Model 4" class="model-img">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 5: Tests / Showcase Video -->
+    <section class="win-window">
+      <div class="win-titlebar">
+        <div class="win-title">
+          <span data-i18n="title_video">media_player.exe - System Showcase</span>
+        </div>
+        <div class="win-controls">
+          <button class="win-btn">_</button>
+          <button class="win-btn">□</button>
+          <button class="win-btn close">×</button>
+        </div>
+      </div>
+      <div class="win-content">
+        <p class="section-intro" data-i18n="video_intro">Gameplay systems showcase currently in development:</p>
+
+        <div class="single-video-container">
+          <div class="video-panel">
+            <div class="panel-header">
+              <span data-i18n="video_panel_header">Asymmetric Game System Showcase</span>
+            </div>
+            <div class="video-wrapper">
+              <!-- Replace this YouTube embed URL with your demo video -->
+              <iframe 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="Asymmetric Game System Showcase" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="panel-caption" data-i18n="video_caption">
+              Showcase of the asymmetric game currently in development: Killer mechanics, survivor interaction minigames, and 1vs9 match state logic in Roblox.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 6: Direct Contact -->
+    <section class="win-window">
+      <div class="win-titlebar">
+        <div class="win-title">
+          <span data-i18n="title_contact">contact.exe</span>
+        </div>
+        <div class="win-controls">
+          <button class="win-btn">_</button>
+          <button class="win-btn">□</button>
+          <button class="win-btn close">×</button>
+        </div>
+      </div>
+      <div class="win-content">
+        <div class="contact-buttons">
+          <a href="mailto:saldanawitman7@gmail.com" class="retro-btn" data-i18n="contact_email">
+            Email: saldanawitman7@gmail.com
+          </a>
+          <a href="https://github.com/WitmanDaniel" target="_blank" rel="noopener noreferrer" class="retro-btn">
+            GitHub: WitmanDaniel
+          </a>
+          <a href="https://www.roblox.com/users/profile?username=Ramsowar3" target="_blank" rel="noopener noreferrer" class="retro-btn" data-i18n="contact_roblox">
+            Roblox Profile: Ramsowar3
+          </a>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="retro-btn">
+            Discord: @wasdev23
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Windows 95 Bottom Taskbar -->
+  <footer class="win-taskbar">
+    <div class="start-button">
+      <span data-i18n="taskbar_start">Start</span>
+    </div>
+    <div class="taskbar-divider"></div>
+    <div class="taskbar-task">
+      <span data-i18n="taskbar_portfolio">Portfolio - Witman Daniel</span>
+    </div>
+    <div class="taskbar-tray" id="clock">12:00 PM</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
